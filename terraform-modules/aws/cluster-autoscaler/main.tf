@@ -77,7 +77,7 @@ module "cluster-autoscaler" {
   repository          = "https://kubernetes.github.io/autoscaler"
   official_chart_name = "cluster-autoscaler"
   user_chart_name     = "cluster-autoscaler"
-  helm_version        = "9.21.0"
+  helm_version        = "9.9.2"
   namespace           = "kube-system"
   helm_values         = data.template_file.helm_values.rendered
 
