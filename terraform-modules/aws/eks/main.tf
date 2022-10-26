@@ -87,7 +87,7 @@ module "eks" {
 
 resource "aws_eks_addon" "aws-ebs-csi-driver" {
   addon_name        = "aws-ebs-csi-driver"
-  addon_version     = "v1.12.1"
+  addon_version     = "v1.11.3"
   cluster_name      = module.eks.cluster_id
   resolve_conflicts = "OVERWRITE"
 }
