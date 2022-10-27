@@ -11,7 +11,7 @@ variable "aws_region" {
 
 variable "cluster_name" {
   type        = string
-  default     = "cluster"
+  default     = "staging"
   description = "EKS cluster name"
 }
 
