@@ -5,18 +5,7 @@ locals {
 
 data "aws_caller_identity" "current" {}
 
-#
-# Helm values
-#
-data "template_file" "helm_values" {
-  template = file("${path.module}/helm_values.tpl.yaml")
-  vars = {
-    awsAccountID       = data.aws_caller_identity.current.account_id
-    clusterName        = var.cluster_name
-    serviceAccountName = local.official_chart_name
-    chartName          = local.official_chart_name
-  }
-}
+
 
 
 module "cert-manager" {
